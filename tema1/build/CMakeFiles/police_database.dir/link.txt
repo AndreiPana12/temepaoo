@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/police_database.dir/src/main.cpp.o CMakeFiles/police_database.dir/src/Criminal.cpp.o CMakeFiles/police_database.dir/src/PoliceDatabase.cpp.o  -o police_database 

@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/utzu/Desktop/paoo/tema1/src/Criminal.cpp
+iostream
+-
+optional
+-
+PoliceDatabase.h
+/home/utzu/Desktop/paoo/tema1/src/PoliceDatabase.h
+
+/home/utzu/Desktop/paoo/tema1/src/Criminal.h
+string
+-
+optional
+-
+
+/home/utzu/Desktop/paoo/tema1/src/PoliceDatabase.cpp
+PoliceDatabase.h
+/home/utzu/Desktop/paoo/tema1/src/PoliceDatabase.h
+iostream
+-
+
+/home/utzu/Desktop/paoo/tema1/src/PoliceDatabase.h
+Criminal.h
+/home/utzu/Desktop/paoo/tema1/src/Criminal.h
+vector
+-
+optional
+-
+
+/home/utzu/Desktop/paoo/tema1/src/main.cpp
+iostream
+-
+PoliceDatabase.h
+/home/utzu/Desktop/paoo/tema1/src/PoliceDatabase.h
+optional
+-
+

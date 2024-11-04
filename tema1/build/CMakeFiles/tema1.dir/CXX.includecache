@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/utzu/Desktop/paoo/tema1/src/Player.cpp
+Player.h
+/home/utzu/Desktop/paoo/tema1/src/Player.h
+
+/home/utzu/Desktop/paoo/tema1/src/Player.h
+iostream
+-
+string
+-
+
+/home/utzu/Desktop/paoo/tema1/src/Team.cpp
+Team.h
+/home/utzu/Desktop/paoo/tema1/src/Team.h
+
+/home/utzu/Desktop/paoo/tema1/src/Team.h
+iostream
+-
+string
+-
+vector
+-
+memory
+-
+Player.h
+/home/utzu/Desktop/paoo/tema1/src/Player.h
+
+/home/utzu/Desktop/paoo/tema1/src/main.cpp
+Team.h
+/home/utzu/Desktop/paoo/tema1/src/Team.h
+
