@@ -16,6 +16,15 @@ bool Player::operator>(const Player& other) const {
     return age > other.age; // Compară vârstele
 }
 
+// Supraincarcarea operatorului de atribuire (necesar pentru alocarea dinamică)
+Player& Player::operator=(const Player& other) {
+    if (this != &other) {
+        this->name = other.name; // Copiază valoarea string-ului
+        age = other.age; // Copiază vârsta
+        position = other.position; // Copiază poziția
+    }
+    return *this; // Returnează obiectul curent
+}
 
 // Destructor
 Player::~Player() {
