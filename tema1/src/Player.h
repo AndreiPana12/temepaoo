@@ -19,6 +19,8 @@ public:
     //met de supraincarcare
     bool operator<(const Player& other) const; // Compară după vârstă
     bool operator>(const Player& other) const; // Compară după vârstă
+    Player& operator=(const Player& other); // Supraincarcarea operatorului de atribuire
+
     // Metode de acces
     string getName() const;
     int getAge() const;
