@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/utzu/Desktop/paoo/tema1/src/Goalkeeper.cpp" "/home/utzu/Desktop/paoo/tema1/build/CMakeFiles/tema1.dir/src/Goalkeeper.cpp.o"
   "/home/utzu/Desktop/paoo/tema1/src/Player.cpp" "/home/utzu/Desktop/paoo/tema1/build/CMakeFiles/tema1.dir/src/Player.cpp.o"
   "/home/utzu/Desktop/paoo/tema1/src/Team.cpp" "/home/utzu/Desktop/paoo/tema1/build/CMakeFiles/tema1.dir/src/Team.cpp.o"
   "/home/utzu/Desktop/paoo/tema1/src/main.cpp" "/home/utzu/Desktop/paoo/tema1/build/CMakeFiles/tema1.dir/src/main.cpp.o"

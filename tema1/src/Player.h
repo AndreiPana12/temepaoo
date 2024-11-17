@@ -6,13 +6,16 @@
 using namespace std;
 class Player {
 private:
-    string name;   // Utilizăm std::string pentru gestionarea automată a memoriei
+    string *name;   // Utilizăm std::string pentru gestionarea automată a memoriei
     int age;
     string position;
 
 public:
-    // Constructor parametrizat
     Player(const string& name, int age, const string& position);
+
+
+    // Copy constructor
+    Player(const Player& other);
     
     // Destructor
     ~Player();
@@ -24,7 +27,8 @@ public:
     // Metode de acces
     string getName() const;
     int getAge() const;
-    string getPosition() const;
+    virtual string getPosition() const;
+
 };
 
 #endif // PLAYER_H

@@ -51,7 +51,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/utzu/Desktop/paoo/tema1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/utzu/Desktop/paoo/tema1/build
+CMAKE_BINARY_DIR = /home/utzu/Desktop/paoo/tema1/src
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/utzu/Desktop/paoo/tema1/build/CMakeFiles /home/utzu/Desktop/paoo/tema1/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/utzu/Desktop/paoo/tema1/src/CMakeFiles /home/utzu/Desktop/paoo/tema1/src/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/utzu/Desktop/paoo/tema1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/utzu/Desktop/paoo/tema1/src/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,113 +123,86 @@ tema1/fast:
 	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/build
 .PHONY : tema1/fast
 
-src/Goalkeeper.o: src/Goalkeeper.cpp.o
+Player.o: Player.cpp.o
 
-.PHONY : src/Goalkeeper.o
-
-# target to build an object file
-src/Goalkeeper.cpp.o:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/Goalkeeper.cpp.o
-.PHONY : src/Goalkeeper.cpp.o
-
-src/Goalkeeper.i: src/Goalkeeper.cpp.i
-
-.PHONY : src/Goalkeeper.i
-
-# target to preprocess a source file
-src/Goalkeeper.cpp.i:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/Goalkeeper.cpp.i
-.PHONY : src/Goalkeeper.cpp.i
-
-src/Goalkeeper.s: src/Goalkeeper.cpp.s
-
-.PHONY : src/Goalkeeper.s
-
-# target to generate assembly for a file
-src/Goalkeeper.cpp.s:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/Goalkeeper.cpp.s
-.PHONY : src/Goalkeeper.cpp.s
-
-src/Player.o: src/Player.cpp.o
-
-.PHONY : src/Player.o
+.PHONY : Player.o
 
 # target to build an object file
-src/Player.cpp.o:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/Player.cpp.o
-.PHONY : src/Player.cpp.o
+Player.cpp.o:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Player.cpp.o
+.PHONY : Player.cpp.o
 
-src/Player.i: src/Player.cpp.i
+Player.i: Player.cpp.i
 
-.PHONY : src/Player.i
+.PHONY : Player.i
 
 # target to preprocess a source file
-src/Player.cpp.i:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/Player.cpp.i
-.PHONY : src/Player.cpp.i
+Player.cpp.i:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Player.cpp.i
+.PHONY : Player.cpp.i
 
-src/Player.s: src/Player.cpp.s
+Player.s: Player.cpp.s
 
-.PHONY : src/Player.s
+.PHONY : Player.s
 
 # target to generate assembly for a file
-src/Player.cpp.s:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/Player.cpp.s
-.PHONY : src/Player.cpp.s
+Player.cpp.s:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Player.cpp.s
+.PHONY : Player.cpp.s
 
-src/Team.o: src/Team.cpp.o
+Team.o: Team.cpp.o
 
-.PHONY : src/Team.o
+.PHONY : Team.o
 
 # target to build an object file
-src/Team.cpp.o:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/Team.cpp.o
-.PHONY : src/Team.cpp.o
+Team.cpp.o:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Team.cpp.o
+.PHONY : Team.cpp.o
 
-src/Team.i: src/Team.cpp.i
+Team.i: Team.cpp.i
 
-.PHONY : src/Team.i
+.PHONY : Team.i
 
 # target to preprocess a source file
-src/Team.cpp.i:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/Team.cpp.i
-.PHONY : src/Team.cpp.i
+Team.cpp.i:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Team.cpp.i
+.PHONY : Team.cpp.i
 
-src/Team.s: src/Team.cpp.s
+Team.s: Team.cpp.s
 
-.PHONY : src/Team.s
+.PHONY : Team.s
 
 # target to generate assembly for a file
-src/Team.cpp.s:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/Team.cpp.s
-.PHONY : src/Team.cpp.s
+Team.cpp.s:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Team.cpp.s
+.PHONY : Team.cpp.s
 
-src/main.o: src/main.cpp.o
+main.o: main.cpp.o
 
-.PHONY : src/main.o
+.PHONY : main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-src/main.i: src/main.cpp.i
+main.i: main.cpp.i
 
-.PHONY : src/main.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/main.s: src/main.cpp.s
+main.s: main.cpp.s
 
-.PHONY : src/main.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -240,18 +213,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tema1"
-	@echo "... src/Goalkeeper.o"
-	@echo "... src/Goalkeeper.i"
-	@echo "... src/Goalkeeper.s"
-	@echo "... src/Player.o"
-	@echo "... src/Player.i"
-	@echo "... src/Player.s"
-	@echo "... src/Team.o"
-	@echo "... src/Team.i"
-	@echo "... src/Team.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... Player.o"
+	@echo "... Player.i"
+	@echo "... Player.s"
+	@echo "... Team.o"
+	@echo "... Team.i"
+	@echo "... Team.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
