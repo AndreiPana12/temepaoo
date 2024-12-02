@@ -4,15 +4,14 @@
 using namespace std;
 
 // Constructor
-Team::Team(const string& teamName) 
-    : teamName(new string(teamName)) { // Alocă dinamic string-ul
+Team::Team(const string& teamName)
+    : teamName(make_unique<string>(teamName)) { // Use std::make_unique
     cout << "Constructor Team pentru echipa " << *this->teamName << endl;
 }
 
 // Move constructor
 Team::Team(Team&& other) noexcept
-    : teamName(other.teamName), players(std::move(other.players)) { // Mutăm resursele
-    other.teamName = nullptr; // Setăm teamName-ul sursă la nullptr pentru a preveni eliberarea memoriei
+    : teamName(move(other.teamName)), players(move(other.players)) {
     cout << "Move Constructor pentru echipa " << *this->teamName << endl;
 }
 
@@ -20,19 +19,22 @@ Team::Team(Team&& other) noexcept
 Team::~Team() {
     if (teamName) {
         cout << "Destructor pentru echipa " << *teamName << endl;
-        delete teamName;
+        //delete teamName;
     }
 }
 
 // Adăugare jucător
 void Team::addPlayer(const Player& player) {
-    players.push_back(make_unique<Player>(player)); // Folosim copy constructor pentru a copia playerul
-    cout << "Adăugat jucător " << player.getName() 
-         << " în echipa " << *teamName << endl;
+    lock_guard<mutex> lock(mtx); // Lock the mutex
+    players.push_back(make_unique<Player>(player)); 
+    cout << "Adăugat jucător " << player.getName() << " în echipa " << *teamName << endl;
 }
+
+
 
 // Afișare jucători
 void Team::displayPlayers() const {
+    lock_guard<mutex> lock(mtx); // Lock the mutex
     cout << "Jucători în echipa " << *teamName << ":" << endl;
     for (const auto& player : players) {
         cout << "Nume: " << player->getName()

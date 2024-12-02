@@ -1,32 +1,24 @@
-// Team.h
-
-#ifndef TEAM_H
-#define TEAM_H
-
-#include <iostream>
-#include <string>
+#include <mutex> // Add this header for std::mutex
 #include <vector>
-#include <memory> // Include pentru unique_ptr
+#include <memory>
 #include "Player.h"
 using namespace std;
 class Team {
 private:
-    string* teamName;
-    vector<unique_ptr<Player>> players; // Folosim unique_ptr pentru jucători
+    unique_ptr<string> teamName;
+    vector<unique_ptr<Player>> players; // Players stored as unique pointers
+    mutable mutex mtx; // Mutex to protect access to players and teamName
 
 public:
     Team(const string& teamName);
-    
     Team(Team&& other) noexcept;
+    ~Team();
 
-    ~Team(); // Destructorul va elibera automat memoriile pentru unique_ptr
-
-    // Metodele de manipulare a jucătorilor
     void addPlayer(const Player& player);
     void displayPlayers() const;
 
-    // Alte metode
-    string getTeamName() const { return *teamName; }
+    string getTeamName() const { 
+        lock_guard<mutex> lock(mtx); // Protect access to teamName
+        return *teamName; 
+    }
 };
-
-#endif // TEAM_H

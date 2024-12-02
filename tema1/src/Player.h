@@ -3,10 +3,11 @@
 
 #include <iostream>
 #include <string>
+#include <memory>
 using namespace std;
 class Player {
 private:
-    string *name;   // Utilizăm std::string pentru gestionarea automată a memoriei
+    unique_ptr<string> name;   // Utilizăm std::string pentru gestionarea automată a memoriei
     int age;
     string position;
 
@@ -15,14 +16,16 @@ public:
 
 
     // Copy constructor
-    Player(const Player& other);
+    
+    // Delete the copy constructor and copy assignment operator
+    Player(const Player& other) ;
     
     // Destructor
     ~Player();
     //met de supraincarcare
     bool operator<(const Player& other) const; // Compară după vârstă
     bool operator>(const Player& other) const; // Compară după vârstă
-    Player& operator=(const Player& other); // Supraincarcarea operatorului de atribuire
+    Player& operator=(const Player& other) ; // Supraincarcarea operatorului de atribuire
 
     // Metode de acces
     string getName() const;

@@ -6,14 +6,28 @@
 
 #IncludeRegexTransform: 
 
+/home/utzu/Desktop/paoo/tema1/src/Goalkeeper.cpp
+Goalkeeper.h
+/home/utzu/Desktop/paoo/tema1/src/Goalkeeper.h
+iostream
+-
+
 /home/utzu/Desktop/paoo/tema1/src/Goalkeeper.h
 Player.h
 /home/utzu/Desktop/paoo/tema1/src/Player.h
+
+/home/utzu/Desktop/paoo/tema1/src/Player.cpp
+Player.h
+/home/utzu/Desktop/paoo/tema1/src/Player.h
+memory
+-
 
 /home/utzu/Desktop/paoo/tema1/src/Player.h
 iostream
 -
 string
+-
+memory
 -
 
 /home/utzu/Desktop/paoo/tema1/src/Team.cpp
@@ -25,9 +39,7 @@ cstring
 -
 
 /home/utzu/Desktop/paoo/tema1/src/Team.h
-iostream
--
-string
+mutex
 -
 vector
 -
@@ -35,4 +47,12 @@ memory
 -
 Player.h
 /home/utzu/Desktop/paoo/tema1/src/Player.h
+
+/home/utzu/Desktop/paoo/tema1/src/main.cpp
+iostream
+-
+Team.h
+/home/utzu/Desktop/paoo/tema1/src/Team.h
+Goalkeeper.h
+/home/utzu/Desktop/paoo/tema1/src/Goalkeeper.h
 

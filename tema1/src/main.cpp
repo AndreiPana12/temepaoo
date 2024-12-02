@@ -1,20 +1,21 @@
 // src/main.cpp
 #include <iostream>
 #include "Team.h"
-
+#include "Goalkeeper.h"
 int main() {
      // Creăm o echipă
     Team team("Steaua");
-
+   
     // Creăm câțiva jucători
     Player player1("Denis Alibec", 33, "Atacant");
     Player player2("Denis Man", 26, "Mijlocaș");
-    Player player3("Manuel Neuer", 38, "Portar");
+    Goalkeeper goalkeeper("Manuel Neuer", 38, "Portar", 3);
+
 
     // Adăugăm jucători în echipă folosind obiectele Player
     team.addPlayer(player1);
     team.addPlayer(player2);
-    team.addPlayer(player3);
+    team.addPlayer(goalkeeper);
 
     // Afișăm jucătorii din echipă
     team.displayPlayers(); 
@@ -32,3 +33,4 @@ int main() {
 
     return 0;
 }
+//SUPRESS METODELE MOVE SI copy constructor

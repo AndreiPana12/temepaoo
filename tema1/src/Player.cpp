@@ -1,16 +1,19 @@
 #include "Player.h"
+#include <memory>
 using namespace std;
 
 // Copy constructor
 Player::Player(const string& name, int age, const string& position)
-    : name(new string(name)), age(age), position(position) { // Alocare dinamică pentru nume
+    : name(make_unique<string>(name)), age(age), position(position) {
     cout << "Constructor parametrizat Player pentru " << *this->name << endl;
 }
 
-Player::Player(const Player& other) 
-    : name(new string(*other.name)), age(other.age), position(other.position) {
+
+Player::Player(const Player& other)
+    : name(make_unique<string>(*other.name)), age(other.age), position(other.position) {
     cout << "Copy constructor pentru " << *this->name << endl;
 }
+
 
 bool Player::operator<(const Player& other) const {
     return age < other.age; // Compară vârstele
@@ -25,11 +28,11 @@ bool Player::operator>(const Player& other) const {
 // Supraincarcarea operatorului de atribuire (necesar pentru alocarea dinamică)
 Player& Player::operator=(const Player& other) {
     if (this != &other) {
-        this->name = other.name; // Copiază valoarea string-ului
-        age = other.age; // Copiază vârsta
-        position = other.position; // Copiază poziția
+        name = make_unique<string>(*other.name); // Create a new copy of the string
+        age = other.age;
+        position = other.position;
     }
-    return *this; // Returnează obiectul curent
+    return *this;
 }
 
 // Destructor

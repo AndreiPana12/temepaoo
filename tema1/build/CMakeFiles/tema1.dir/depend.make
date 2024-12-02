@@ -13,6 +13,7 @@ CMakeFiles/tema1.dir/src/Team.cpp.o: ../src/Player.h
 CMakeFiles/tema1.dir/src/Team.cpp.o: ../src/Team.cpp
 CMakeFiles/tema1.dir/src/Team.cpp.o: ../src/Team.h
 
+CMakeFiles/tema1.dir/src/main.cpp.o: ../src/Goalkeeper.h
 CMakeFiles/tema1.dir/src/main.cpp.o: ../src/Player.h
 CMakeFiles/tema1.dir/src/main.cpp.o: ../src/Team.h
 CMakeFiles/tema1.dir/src/main.cpp.o: ../src/main.cpp
